@@ -19,7 +19,7 @@
                     <th>Gênero</th>
                     <th>&nbsp;</th>
                 </tr>
-                <c:forEach var="item" items="${generos}">
+                <c:forEach var="item" items="${livros}">
                     <tr>
                         <td>${item.id}</td>
                         <td>${item.titulo}</td>
@@ -35,3 +35,4 @@
         </div>
     </body>
 </html>
+
