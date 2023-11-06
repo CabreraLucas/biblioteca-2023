@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Editar Gênero</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
@@ -16,7 +16,7 @@
                     <input type="text" name="nome" class="form-control" value="${genero.nome}" />
                 </div>
                 <br />
-                <a href="/genero/list" class="btn btn-primary">Voltar</a>
+                <a href="/genero/list" class="btn btn-primary" >Voltar</a>
                 <button type="submit" class="btn btn-success">Salvar</button>
             </form>
         </div>

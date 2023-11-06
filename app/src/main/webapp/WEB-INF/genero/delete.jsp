@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Remover Gênero</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
@@ -13,8 +13,8 @@
             <form action="/genero/delete" method="post">
                 <input type="hidden" name="id" value="${genero.id}" />
                 <br />
-                <a href="/genero/list" class="btn btn-primary">Voltar</a>
-                <button type="submit" class="btn btn-success">Excluir</button>
+                <a href="/genero/list" class="btn btn-primary" >Voltar</a>
+                <button type="submit" class="btn btn-danger">Excluir</button>
             </form>
         </div>
     </body>

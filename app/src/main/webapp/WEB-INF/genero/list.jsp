@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Gêneros</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>

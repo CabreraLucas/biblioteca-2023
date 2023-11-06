@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Novo Gênero</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
@@ -12,10 +12,10 @@
             <form action="/genero/insert" method="post">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" class="form-control"/>
+                    <input type="text" name="nome" class="form-control" />
                 </div>
                 <br />
-                <a href="/genero/list" class="btn btn-primary">Voltar</a>
+                <a href="/genero/list" class="btn btn-primary" >Voltar</a>
                 <button type="submit" class="btn btn-success">Salvar</button>
             </form>
         </div>
