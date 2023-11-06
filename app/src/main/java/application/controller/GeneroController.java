@@ -19,17 +19,18 @@ public class GeneroController {
     private GeneroRepository generoRepo;
 
     @RequestMapping("/list")
-    public String list(Model model){
-        model.addAttribute("generos",generoRepo.findAll());
+    public String list(Model model) {
+        model.addAttribute("generos", generoRepo.findAll());
         return "/genero/list";
     }
+
     @RequestMapping("/insert")
-    public String insert(){
+    public String insert() {
         return "/genero/insert";
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public String insert(@RequestParam("nome") String nome){
+    public String insert(@RequestParam("nome") String nome) {
         Genero genero = new Genero();
         genero.setNome(nome);
 
@@ -42,14 +43,14 @@ public class GeneroController {
     public String update(Model model, @RequestParam("id") int id) {
         Optional<Genero> genero = generoRepo.findById(id);
 
-        if(genero.isPresent()){
-            model.addAttribute("genero",genero.get());
+        if(genero.isPresent()) {
+            model.addAttribute("genero", genero.get());
             return "/genero/update";
         }
 
         return "redirect:/genero/list";
     }
-    
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(
         @RequestParam("id") int id,
@@ -57,21 +58,21 @@ public class GeneroController {
     ) {
         Optional<Genero> genero = generoRepo.findById(id);
 
-        if(genero.isPresent()){
+        if(genero.isPresent()) {
             genero.get().setNome(nome);
 
             generoRepo.save(genero.get());
         }
-
+        
         return "redirect:/genero/list";
     }
 
     @RequestMapping("/delete")
-    public String delete(Model model, @RequestParam("id") int id){
+    public String delete(Model model, @RequestParam("id") int id) {
         Optional<Genero> genero = generoRepo.findById(id);
 
-        if(genero.isPresent()){
-            model.addAttribute("genero",genero.get());
+        if(genero.isPresent()) {
+            model.addAttribute("genero", genero.get());
             return "/genero/delete";
         }
 
@@ -85,3 +86,4 @@ public class GeneroController {
         return "redirect:/genero/list";
     }
 }
+

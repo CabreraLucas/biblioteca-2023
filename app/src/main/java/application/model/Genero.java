@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="generos")
 public class Genero {
-    @Id 
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String nome;
@@ -25,5 +25,5 @@ public class Genero {
     }
     public void setNome(String nome) {
         this.nome = nome;
-    } 
+    }
 }
