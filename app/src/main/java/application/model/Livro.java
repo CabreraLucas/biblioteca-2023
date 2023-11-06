@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 @Table(name = "livros")
@@ -14,6 +15,10 @@ public class Livro {
     private int id;
     private String titulo;
     private String isbn;
+
+    @ManyToOne
+    @JoinColumn(name = "id_genero")
+    private Genero genero;
 
     public int getId() {
         return id;
